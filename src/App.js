@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import robot from './robot.glb'
-import modal2 from './modal2.glb'
+// import modal2 from './modal2.glb'
 import poster from './page.png'
 import { useEffect, useState } from 'react';
 function App() {
