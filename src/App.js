@@ -50,7 +50,7 @@ function App() {
         </model-viewer>
 
         <model-viewer ar ar-modes="webxr scene-viewer quick-look" camera-controls src={robot} alt="A 3D model of an astronaut">
-          <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+          <button slot="ar-button" className='modal-btn'>
             👋 Activate AR
           </button>
         </model-viewer>
