@@ -1,6 +1,6 @@
 
 import './App.css';
-import robot from './robot.glb'
+import robot from './robotdemo.glb'
 
 import poster from './page.png'
 import { useEffect, useState } from 'react';
@@ -44,15 +44,26 @@ function App() {
               return <option value={data} key={index}>{data}</option>
             })}
           </select>} */}
-        <model-viewer id="animation_demo" orientation="0deg 0deg 0deg" style={{ innerWidth: "100%" }} loading="eager" autoplay ar shadow-intensity="1" animation-name={currentAnimation} camera-controls poster={poster} src={robot} alt="A 3D model of a shishkebab">
+        {/* <model-viewer id="animation_demo" orientation="0deg 0deg 0deg" style={{ innerWidth: "100%" }} loading="eager" autoplay ar shadow-intensity="1" animation-name={currentAnimation} camera-controls poster={poster} src={robot} alt="A 3D model of a shishkebab">
           <button className='modal-btn' onClick={setANimation}>Change Animation</button>
           <span className='modal-text' >Animation : {currentAnimation}</span>
-        </model-viewer>
+        </model-viewer> */}
 
-        <model-viewer ar ar-modes="webxr scene-viewer quick-look" camera-controls src={robot} alt="A 3D model of an astronaut">
+        <model-viewer
+          id="animation_demo"
+          animation-name={currentAnimation}
+          poster={poster}
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          camera-controls
+          loading="eager" 
+          autoplay 
+          src={robot}
+          alt="A 3D model of an astronaut">
           <button slot="ar-button" className='modal-btn'>
             👋 Activate AR
           </button>
+          <button className='modal-text' onClick={setANimation}>Change Animation</button>
         </model-viewer>
       </div>
 
