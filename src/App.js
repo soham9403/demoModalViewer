@@ -1,7 +1,7 @@
-// import logo from './logo.svg';
+
 import './App.css';
 import robot from './robot.glb'
-// import modal2 from './modal2.glb'
+
 import poster from './page.png'
 import { useEffect, useState } from 'react';
 function App() {
@@ -44,13 +44,12 @@ function App() {
               return <option value={data} key={index}>{data}</option>
             })}
           </select>} */}
-        {/* <model-viewer id="animation_demo" orientation="0deg 0deg 0deg" style={{ innerWidth: "100%" }} loading="eager" autoplay ar shadow-intensity="1" animation-name={currentAnimation} camera-controls poster={poster} src={robot} alt="A 3D model of a shishkebab">
-        <button className='modal-btn' onClick={setANimation}>Change Animation</button>
-        <span className='modal-text' >Animation : {currentAnimation}</span>
-      </model-viewer> */}
-        <model-viewer ar ar-modes="webxr scene-viewer quick-look" camera-controls
-          src={robot}
-          alt="A 3D model of an astronaut">
+        <model-viewer id="animation_demo" orientation="0deg 0deg 0deg" style={{ innerWidth: "100%" }} loading="eager" autoplay ar shadow-intensity="1" animation-name={currentAnimation} camera-controls poster={poster} src={robot} alt="A 3D model of a shishkebab">
+          <button className='modal-btn' onClick={setANimation}>Change Animation</button>
+          <span className='modal-text' >Animation : {currentAnimation}</span>
+        </model-viewer>
+
+        <model-viewer ar ar-modes="webxr scene-viewer quick-look" camera-controls src={robot} alt="A 3D model of an astronaut">
           <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
             👋 Activate AR
           </button>
